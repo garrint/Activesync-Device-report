@@ -18,7 +18,7 @@ EXO_MobileDevice_Inventory.ps1
    Hashtables require uniqueness of the key so that's why the array of hashtable data 
    structure was chosen.
 
- The devices can be sorted by a variety of properties like "LastActivity" to determine 
+ The devices can be sorted by a variety of properties like "LastActivity" ("LastPolicyUpdate" in ver 2.3) to determine 
    stale partnerships or outdated devices needing to be removed.
  
  The DisplayName of the user's CAS mailbox is recorded for importing with the 
