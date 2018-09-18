@@ -5,7 +5,8 @@ Exchange Online Device partnership inventory
 EXO_MobileDevice_Inventory.ps1
 
   Created by: Austin McCollum 2/11/2018 austinmc@microsoft.com
-  Updated by: Garrin Thompson 3/2/2018 garrint@microsoft.com *** "Borrowed" a few quality-of-life functions from Start-RobustCloudCommand.ps1
+  Updated by: Garrin Thompson 9/10/2018 garrint@microsoft.com (ver 2.3) 
+  *** "Borrowed" a few quality-of-life functions from Start-RobustCloudCommand.ps1
 
 
  This script enumerates all devices in Office 365 and reports on many properties of the
