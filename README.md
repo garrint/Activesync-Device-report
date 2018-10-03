@@ -5,7 +5,7 @@ Exchange Online Device partnership inventory
 EXO_MobileDevice_Inventory.ps1
 
   Created by: Austin McCollum 2/11/2018 austinmc@microsoft.com
-  Updated by: Garrin Thompson 9/10/2018 garrint@microsoft.com (ver 2.4) 
+  Updated by: Garrin Thompson 10/2/2018 garrint@microsoft.com (ver 2.4) 
   *** "Borrowed" a few quality-of-life functions from Start-RobustCloudCommand.ps1
 
 
