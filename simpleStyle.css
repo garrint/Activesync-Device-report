@@ -1,0 +1,12 @@
+body {
+font-family:Verdana;
+ font-size:9pt;
+}
+th { 
+background-color:black;
+color:white;
+}
+td {
+ background-color:#FFFFFF;
+color:black;
+}
