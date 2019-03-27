@@ -1,6 +1,6 @@
 #########################################################################################
 # Exchange Online Device partnership inventory
-#  EXO_MobileDevice_Inventory_2.3.ps1
+#  EXO_MobileDevice_Inventory_2.4.ps1
 #  
 #  Created by: Austin McCollum 2/11/2018 austinmc@microsoft.com
 #  Updated by: Garrin Thompson 9/10/2018 garrint@microsoft.com *** "Borrowed" a few quality-of-life functions from Start-RobustCloudCommand.ps1
@@ -408,7 +408,7 @@ Write-Log ("Report started at    " + $($startDate));Write-Log ("Report ended at 
 write-host;Write-Host -NoNewLine "Report started at    ";write-host -ForegroundColor Yellow "$($startDate)"
 Write-Host -NoNewLine "Report ended at      ";write-host -ForegroundColor Yellow "$($endDate)"
 Write-Host -NoNewLine "Total Elapsed Time:   ";write-host -ForegroundColor Yellow "$($elapsedTime)"
-Write-host "-------------------------------------------------";write-host -foregroundcolor Magenta "Device collection Complete!";write-host;sleep 1
+Write-host "-------------------------------------------------";write-host -foregroundcolor Magenta "Device collection Complete! The logfile and the EXO Mobile Device Inventory CSV was created in $outputFolder .";write-host;sleep 1
 
 # Open the HTML summary report
 # & $reportNameHtml
