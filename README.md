@@ -28,3 +28,4 @@ EXO_MobileDevice_Inventory.ps1
 
  Get-CasMailbox is run efficiently with the -HasActiveSyncDevicePartnership filter 
 
+Creates actionable CSV reports in the PowerShell current directory which is enumerated when the script is executed.
