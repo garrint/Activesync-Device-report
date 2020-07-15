@@ -5,7 +5,7 @@ Exchange Online Device partnership inventory
 EXO_MobileDevice_Inventory.ps1
 
   Created by: Austin McCollum 2/11/2018 austinmc@microsoft.com
-  Updated by: Garrin Thompson 10/2/2018 garrint@microsoft.com (ver 2.4) 
+  Updated by: Garrin Thompson 5/27/2020 garrint@microsoft.com (ver 2.5) 
   *** "Borrowed" a few quality-of-life functions from Start-RobustCloudCommand.ps1
 
 
@@ -18,7 +18,7 @@ EXO_MobileDevice_Inventory.ps1
    Hashtables require uniqueness of the key so that's why the array of hashtable data 
    structure was chosen.
 
- The devices can be sorted by a variety of properties like "LastActivity" ("LastPolicyUpdate" in ver 2.3) to determine 
+ The devices can be sorted by a variety of properties like "LastActivity" ("LastPolicyUpdate" in ver 2.5) to determine 
    stale partnerships or outdated devices needing to be removed.
  
  The DisplayName of the user's CAS mailbox is recorded for importing with the 
