@@ -18,8 +18,8 @@
 # of included script samples are subject to the terms specified at 
 # https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx.
 #
-# Exchange Online Device partnership inventory
-#  EXO_MobileDevice_Inventory_2.4.ps1
+# Exchange Online Device partnership inventory, dependent on EXOv2 module being installed (https://www.powershellgallery.com/packages/ExchangeOnlineManagement)
+#  EXO_MobileDevice_Inventory_2.5.ps1
 #  
 #  Created by: Austin McCollum 2/11/2018 austinmc@microsoft.com
 #  Updated by: Garrin Thompson 5/25/2020 garrint@microsoft.com *** "Borrowed" a few quality-of-life functions from Start-RobustCloudCommand.ps1 and added EXOv2 connection
