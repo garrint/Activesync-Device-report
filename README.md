@@ -8,7 +8,7 @@ EXO_MobileDevice_Inventory_<ver>.ps1
   Updated by: Garrin Thompson 5/25/2020 garrint@microsoft.com (ver 2.5) 
   *** "Borrowed" a few quality-of-life functions from Start-RobustCloudCommand.ps1
 
-NOTE: This script is dependent on having the EXOv2 module installed (https://www.powershellgallery.com/packages/ExchangeOnlineManagement)
+NOTE: The 2.5 script is dependent on having the EXOv2 module installed (https://www.powershellgallery.com/packages/ExchangeOnlineManagement).  If you dont have the EXOv2 module installed yet, the 2.5.1(EXOv1-module) script will use the v1 ADAL module instead.
 
  This script enumerates all devices in Office 365 and reports on many properties of the
    device/application and the mailbox owner.
