@@ -2,12 +2,13 @@
 Creating activesync device reports for Office 365 using powershell
 
 Exchange Online Device partnership inventory
-EXO_MobileDevice_Inventory.ps1
+EXO_MobileDevice_Inventory_<ver>.ps1
 
   Created by: Austin McCollum 2/11/2018 austinmc@microsoft.com
   Updated by: Garrin Thompson 5/25/2020 garrint@microsoft.com (ver 2.5) 
   *** "Borrowed" a few quality-of-life functions from Start-RobustCloudCommand.ps1
 
+NOTE: This script is dependent on having the EXOv2 module installed (https://www.powershellgallery.com/packages/ExchangeOnlineManagement)
 
  This script enumerates all devices in Office 365 and reports on many properties of the
    device/application and the mailbox owner.
