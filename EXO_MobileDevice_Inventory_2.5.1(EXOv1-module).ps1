@@ -52,7 +52,7 @@ param
 	$ScriptPath = $(split-path $SCRIPT:MyInvocation.MyCommand.Path -parent)
 )
 #>
-
+ 
 # Writes output to a log file with a time date stamp
 Function Write-Log {
 	Param ([string]$string)
