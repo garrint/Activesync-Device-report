@@ -1,8 +1,8 @@
-# Activesync-Device-report
+# EXO Mobile Device Inventory
 Create a device report for Exchange Online users via powershell.
 
 Exchange Online Device partnership inventory
-EXO_MobileDevice_Inventory_<ver>.ps1
+EXO_MobileDevice_Inventory_3.1.ps1
 
   Created by: Austin McCollum 2/11/2018 austinmc@microsoft.com
   Updated by: Garrin Thompson 7/23/2020 garrint@microsoft.com (ver 3.1) 
