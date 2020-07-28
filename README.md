@@ -5,13 +5,12 @@ Exchange Online Device partnership inventory
 EXO_MobileDevice_Inventory_<ver>.ps1
 
   Created by: Austin McCollum 2/11/2018 austinmc@microsoft.com
-  Updated by: Garrin Thompson 5/25/2020 garrint@microsoft.com (ver 2.5) 
+  Updated by: Garrin Thompson 7/23/2020 garrint@microsoft.com (ver 3.1) 
   *** "Borrowed" a few quality-of-life functions from Start-RobustCloudCommand.ps1
 
-NOTE: The 2.5 script is dependent on having the EXOv2 module installed (https://www.powershellgallery.com/packages/ExchangeOnlineManagement).  If you dont have the EXOv2 module installed yet, the 2.5.1(EXOv1-module) script will use the v1 ADAL module instead.
+NOTE: The 3.1 script is dependent on having the EXOv2 module installed (https://www.powershellgallery.com/packages/ExchangeOnlineManagement).  If you dont have the EXOv2 module installed yet, the 2.5.1(EXOv1-module) script will use the v1 ADAL module instead.
 
- This script enumerates all devices in Office 365 and reports on many properties of the
-   device/application and the mailbox owner.
+ This script enumerates the devices of Exchange Online mailboxes that have ActiveSyncDevicePartnerships and reports on many properties of the device/application and the mailbox owner.
 
  $deviceList is an array of hashtables, because deviceIDs may not be
    unique in an environment. For instance when a device is configured with
@@ -19,8 +18,7 @@ NOTE: The 2.5 script is dependent on having the EXOv2 module installed (https://
    Hashtables require uniqueness of the key so that's why the array of hashtable data 
    structure was chosen.
 
- The devices can be sorted by a variety of properties like "LastActivity" ("LastPolicyUpdate" in ver 2.5) to determine 
-   stale partnerships or outdated devices needing to be removed.
+ The devices can be sorted by a variety of properties like "LastActivity" ("LastPolicyUpdate" in ver 3.1) to determine stale partnerships or outdated devices needing to be removed.  We do not pull LastSuccessSync from Get-MobileDeviceStatistics because that call is too expensive (takes way too long).
  
  The DisplayName of the user's CAS mailbox is recorded for importing with the 
    Set-CasMailbox commandlet to configure allowedDeviceIDs. This is especially useful in 
