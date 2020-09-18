@@ -18,11 +18,13 @@
 # of included script samples are subject to the terms specified at 
 # https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx.
 #
-# Exchange Online Device partnership inventory, dependent on EXOv2 module being installed (https://www.powershellgallery.com/packages/ExchangeOnlineManagement)
+# Exchange Online Device partnership inventory, dependent on EXOv2 module being installed 
+#			(https://www.powershellgallery.com/packages/ExchangeOnlineManagement)
 #  EXO_MobileDevice_Inventory_3.1.ps1
 #  
 #  Created by: Austin McCollum 2/11/2018 austinmc@microsoft.com
-#  Updated by: Garrin Thompson 7/23/2020 garrint@microsoft.com *** "Borrowed" a few quality-of-life functions from Start-RobustCloudCommand.ps1 and added EXOv2 connection
+#  Updated by: Garrin Thompson 7/23/2020 garrint@microsoft.com *** "Borrowed" a few 
+#	quality-of-life functions from Start-RobustCloudCommand.ps1 and added EXOv2 connection
 #
 #########################################################################################
 # This script enumerates all devices in Office 365 and reports on many properties of the
@@ -119,13 +121,10 @@ Function New-CleanO365Session {
 	else {
 		$ErrorCount = 0
 	}
-	
 	# Import the PS session/connect to EXO
-		#OLD Basic Auth Method import session
-			#$null = Import-PSSession $Exchangesession -AllowClobber
-	$null = Connect-ExchangeOnline -UserPrincipalName $EXOLogonUPN -ShowProgress:$false -ShowBanner:$false
+		$null = Connect-ExchangeOnline -UserPrincipalName $EXOLogonUPN -DelegatedOrganization $EXOtenant -ShowProgress:$false -ShowBanner:$false
 	# Set the Start time for the current session
-	Set-Variable -Scope script -Name SessionStartTime -Value (Get-Date)
+		Set-Variable -Scope script -Name SessionStartTime -Value (Get-Date)
 }
 
 # Verifies that the connection is healthy; Resets it every "$ResetSeconds" number of seconds (14.5 mins) either way 
@@ -190,7 +189,7 @@ Function Test-O365Session {
 	$outputfilename = '\EXO_LongRunnerScript_Output_'
 	$execpol = get-executionpolicy
 	Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force  #this is just for the session running this script
-	Write-Host; $EXOLogonUPN=Read-host "Type in UPN for account that will execute this script"; write-host "...pleasewait...connecting to EXO..."
+	Write-Host;$EXOLogonUPN=Read-host "Type in UPN for account that will execute this script";$EXOtenant=Read-host "Type in your tenant domain name (eg <domain>.onmicrosoft.com)";write-host "...pleasewait...connecting to EXO..."
 	$SmtpCreds = (get-credential -Message "Provide EXO account Pasword" -UserName "$EXOLogonUPN")
 	# Set $OutputFolder to Current PowerShell Directory
 	[IO.Directory]::SetCurrentDirectory((Convert-Path (Get-Location -PSProvider FileSystem)))
