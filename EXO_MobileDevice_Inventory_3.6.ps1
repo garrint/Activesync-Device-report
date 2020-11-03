@@ -20,7 +20,7 @@
 #
 # Exchange Online Device partnership inventory, dependent on EXOv2 module being installed 
 #			(https://www.powershellgallery.com/packages/ExchangeOnlineManagement)
-#  EXO_MobileDevice_Inventory_3.1.ps1
+#  EXO_MobileDevice_Inventory_3.6.ps1
 #  
 #  Created by: Austin McCollum 2/11/2018 austinmc@microsoft.com
 #  Updated by: Garrin Thompson 7/23/2020 garrint@microsoft.com *** "Borrowed" a few 
@@ -189,8 +189,8 @@ Function Test-O365Session {
 	$outputfilename = '\EXO_LongRunnerScript_Output_'
 	$execpol = get-executionpolicy
 	Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force  #this is just for the session running this script
-	Write-Host;$EXOLogonUPN=Read-host "Type in UPN for account that will execute this script";$EXOtenant=Read-host "Type in your tenant domain name (eg <domain>.onmicrosoft.com)";write-host "...pleasewait...connecting to EXO..."
-	$SmtpCreds = (get-credential -Message "Provide EXO account Pasword" -UserName "$EXOLogonUPN")
+	Write-Host;$EXOLogonUPN=Read-host "Type in UPN for account that will login to EXO to execute this script";$EXOtenant=Read-host "Type in your complete tenant domain name (eg <domain>.onmicrosoft.com)";write-host "...pleasewait...connecting to EXO..."
+	$SmtpCreds = (get-credential -Message "Provide your EXO account password to be used to attempt email notifications" -UserName "$EXOLogonUPN")
 	# Set $OutputFolder to Current PowerShell Directory
 	[IO.Directory]::SetCurrentDirectory((Convert-Path (Get-Location -PSProvider FileSystem)))
 	$outputFolder = [IO.Directory]::GetCurrentDirectory()
