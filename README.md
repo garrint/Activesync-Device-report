@@ -2,13 +2,13 @@
 Create a device report for Exchange Online users via powershell.
 
 Exchange Online Device partnership inventory
-EXO_MobileDevice_Inventory_3.5.ps1
+EXO_MobileDevice_Inventory_3.6.ps1
 
   Created by: Austin McCollum 2/11/2018 austinmc@microsoft.com
   Updated by: Garrin Thompson 9/15/2020 garrint@microsoft.com (ver 2.x+) 
   *** "Borrowed" a few quality-of-life functions from Start-RobustCloudCommand.ps1
 
-NOTE: The 3.5 script is dependent on having the EXOv2 module installed (https://www.powershellgallery.com/packages/ExchangeOnlineManagement).  If you dont have the EXOv2 module installed yet, the 2.5.1(EXOv1-module) script will use the v1 ADAL module instead, but version 2.5 still requests with resultsize unlmited (which may not complete in large env).
+NOTE: The 3.6 script is dependent on having the EXOv2 module installed (https://www.powershellgallery.com/packages/ExchangeOnlineManagement).  If you dont have the EXOv2 module installed yet, the 2.5.1(EXOv1-module) script will use the v1 ADAL module instead, but version 2.5 still requests with resultsize unlmited (which may not complete in large env).
 
  This script enumerates the devices of Exchange Online mailboxes that have ActiveSyncDevicePartnerships and reports on many properties of the device/application and the mailbox owner.  Here’s what my script does:
 
